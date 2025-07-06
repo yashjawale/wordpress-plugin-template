@@ -1,0 +1,21 @@
+{
+    "name": "yashjawale/wordpress-plugin-template",
+    "description": "A starter WordPress plugin template to serve as starting point in creating a custom plugin",
+    "require": {
+        "php": "^8.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yashjawale\\WordpressPluginTemplate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yashjawale",
+            "email": "yash25.j@gmail.com"
+        }
+    ]
+}
