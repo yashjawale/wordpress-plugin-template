@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yashjawale\\WordpressPluginTemplate\\": "src/"
+            "WordpressPluginTemplate\\": "inc/"
         }
     },
     "authors": [
