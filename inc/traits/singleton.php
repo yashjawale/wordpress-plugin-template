@@ -7,10 +7,7 @@
 
 namespace WordPressPluginTemplate\Traits;
 
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 trait Singleton {
 	/**
