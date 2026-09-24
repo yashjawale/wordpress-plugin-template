@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WordPress Plugin Template
  * Description: A template for creating WordPress plugins.
- * 
+ *
  * @package WordPressPluginTemplate
  */
 

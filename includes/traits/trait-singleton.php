@@ -1,7 +1,7 @@
 <?php
 /**
  * Singleton trait
- * 
+ *
  * @package WordPressPluginTemplate
  */
 
@@ -19,7 +19,7 @@ trait Singleton {
 
 	/**
 	 * Get instance of the class that uses this trait
-	 * 
+	 *
 	 * @return Instance of the class
 	 */
 	public static function get_instance() {

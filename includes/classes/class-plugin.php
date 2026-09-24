@@ -1,7 +1,7 @@
 <?php
 /**
  * Main plugin class
- * 
+ *
  * @package WordPressPluginTemplate
  */
 
@@ -11,6 +11,11 @@ use WordPressPluginTemplate\Traits\Singleton;
 
 defined( 'ABSPATH' ) || exit;
 
+/**
+ * Main plugin class.
+ *
+ * @package WordPressPluginTemplate
+ */
 class Plugin {
 	use Singleton;
 
@@ -21,6 +26,6 @@ class Plugin {
 	 *
 	 * @return void
 	 */
-	protected function init() : void {
+	protected function init(): void {
 	}
 }

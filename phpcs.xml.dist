@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Plugin Template">
+	<description>WordPress Coding Standards for this plugin.</description>
+
+	<file>wordpress-plugin-template.php</file>
+	<file>includes</file>
+
+	<exclude-pattern>vendor/*</exclude-pattern>
+
+	<arg name="basepath" value="."/>
+	<arg name="colors"/>
+	<arg name="extensions" value="php"/>
+	<arg name="severity" value="1"/>
+	<arg value="sp"/>
+
+	<rule ref="WordPress"/>
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="wordpress-plugin-template" />
+			</property>
+		</properties>
+	</rule>
+</ruleset>

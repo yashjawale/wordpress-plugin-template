@@ -1,11 +1,13 @@
 {
     "name": "yashjawale/wordpress-plugin-template",
+    "license": "GPL-3.0-only",
     "description": "A starter WordPress plugin template to serve as starting point in creating a custom plugin",
     "require": {
         "php": "^8.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^12.2"
+        "phpunit/phpunit": "^12.2",
+        "wp-coding-standards/wpcs": "^3.2"
     },
     "autoload": {
         "psr-4": {
@@ -15,6 +17,15 @@
             "includes/classes/",
             "includes/traits/"
         ]
+    },
+    "scripts": {
+        "lint:php": "phpcs",
+        "lint:php:fix": "phpcbf"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "authors": [
         {

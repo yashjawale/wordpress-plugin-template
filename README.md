@@ -36,3 +36,19 @@ composer dump-autoload
 ```
 
 The generated `vendor/` directory is not committed, so it must be generated as part of local setup or your plugin release/build process.
+
+## PHP coding standards
+
+This template uses the official WordPress Coding Standards through PHPCS. Install the development dependencies with `composer install`, then check the PHP files with:
+
+```sh
+composer lint:php
+```
+
+To automatically fix supported formatting issues, run:
+
+```sh
+composer lint:php:fix
+```
+
+The rules are configured in `phpcs.xml.dist`. Review automatic fixes before committing them.
