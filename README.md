@@ -61,7 +61,7 @@ composer phpstan
 
 Configuration is in `phpstan.neon.dist`; generated assets and Composer dependencies are excluded.
 
-The `php-stubs/wordpress-stubs` development dependency provides WordPress function and class declarations to PHP language servers without requiring a local WordPress core checkout. VS Code Intelephense is configured to include `vendor/php-stubs/wordpress-stubs` and raise its file-size limit to index the 5+ MB stub file; in other editors, add that directory as a PHP include/stub path and ensure the editor's indexing size limit is high enough. Install Composer dependencies before opening the project so the stubs are present.
+The `php-stubs/wordpress-stubs` development dependency provides WordPress function and class declarations to PHP language servers without requiring a local WordPress core checkout. VS Code Intelephense and Zed's default Phpactor server are configured to index `vendor/php-stubs/wordpress-stubs`, with a higher file-size limit for the 5+ MB stub file. Phpactor keeps its project index in the ignored `.phpactor-cache/` folder so the stubs are indexed on first launch. In other editors, add that directory as a PHP include/stub path and ensure the editor's indexing size limit is high enough. Install Composer dependencies before opening the project so the stubs are present.
 
 ## Front-end assets
 

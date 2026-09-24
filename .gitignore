@@ -49,3 +49,4 @@ wp-config.php
 /vendor/
 /node_modules/
 /assets/build/
+/.phpactor-cache/

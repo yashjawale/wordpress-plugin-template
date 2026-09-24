@@ -1,0 +1,7 @@
+{
+    "language_server_phpstan.enabled": true,
+    "php_code_sniffer.enabled": true,
+    "indexer.stub_paths": ["%project_root%/vendor/php-stubs/wordpress-stubs"],
+    "indexer.max_filesize_to_index": 10000000,
+    "indexer.index_path": "%project_root%/.phpactor-cache/index"
+}
