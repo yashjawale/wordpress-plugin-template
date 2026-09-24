@@ -1,0 +1,16 @@
+includes:
+	- vendor/szepeviktor/phpstan-wordpress/extension.neon
+
+parameters:
+	level: 6
+	phpVersion: 80400
+	paths:
+		- wordpress-plugin-template.php
+		- includes
+		- assets/src
+	bootstrapFiles:
+		- vendor/autoload.php
+	excludePaths:
+		analyse:
+			- assets/build
+			- vendor

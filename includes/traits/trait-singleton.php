@@ -11,21 +11,22 @@ defined( 'ABSPATH' ) || exit;
 
 trait Singleton {
 	/**
-	 * Instance variable
+	 * The singleton instance for the class using this trait.
 	 *
-	 * @var $instance The attribute storing the class instance
+	 * @var self|null
 	 */
-	private static $instance;
+	private static ?self $instance = null;
 
 	/**
-	 * Get instance of the class that uses this trait
+	 * Get the singleton instance of the class using this trait.
 	 *
-	 * @return Instance of the class
+	 * @return self
 	 */
-	public static function get_instance() {
+	public static function get_instance(): self {
 		if ( null === self::$instance ) {
 			self::$instance = new self();
 		}
+
 		return self::$instance;
 	}
 

@@ -7,7 +7,10 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^12.2",
-        "wp-coding-standards/wpcs": "^3.2"
+        "wp-coding-standards/wpcs": "^3.2",
+        "phpstan/phpstan": "^2.2",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "php-stubs/wordpress-stubs": "^7.1"
     },
     "autoload": {
         "psr-4": {
@@ -20,7 +23,8 @@
     },
     "scripts": {
         "lint:php": "phpcs",
-        "lint:php:fix": "phpcbf"
+        "lint:php:fix": "phpcbf",
+        "phpstan": "phpstan analyse --configuration=phpstan.neon.dist --memory-limit=1G"
     },
     "config": {
         "allow-plugins": {
