@@ -9,13 +9,13 @@
     },
     "autoload": {
         "psr-4": {
-            "WordpressPluginTemplate\\": "inc/"
+            "WordPressPluginTemplate\\": "inc/"
         }
     },
     "authors": [
         {
             "name": "yashjawale",
-            "email": "yash25.j@gmail.com"
+            "email": "connect@yashjawale.in"
         }
     ]
 }
