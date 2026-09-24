@@ -22,6 +22,8 @@ A starter template for building WordPress plugins.
 
 The plugin entry point loads `vendor/autoload.php` and starts `WordPressPluginTemplate\\Classes\\Plugin`. Add plugin hooks and setup in the `init()` method in `includes/classes/class-plugin.php`.
 
+`uninstall.php` is guarded by `WP_UNINSTALL_PLUGIN`. It currently performs no cleanup because the template does not store persistent plugin data; add deletion logic there if you introduce stored options or tables.
+
 ## Autoloading and file names
 
 Composer uses PSR-4 for conventionally named PHP files under `includes/` and a classmap for `includes/classes/` and `includes/traits/`. The classmap supports the WordPress-style `class-` and `trait-` filename prefixes, for example:
