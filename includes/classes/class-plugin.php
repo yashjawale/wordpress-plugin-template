@@ -27,5 +27,7 @@ class Plugin {
 	 * @return void
 	 */
 	protected function init(): void {
+		Assets::get_instance();
+		Blocks::get_instance();
 	}
 }

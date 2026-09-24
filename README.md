@@ -6,7 +6,7 @@ A starter template for building WordPress plugins.
 
 - PHP 8.4 or later
 - Composer
-- WordPress
+- WordPress 6.8 or later
 
 ## Getting started
 
@@ -52,3 +52,26 @@ composer lint:php:fix
 ```
 
 The rules are configured in `phpcs.xml.dist`. Review automatic fixes before committing them.
+
+## Front-end assets
+
+Node.js 24 is pinned in `.nvmrc`. The asset pipeline uses `@wordpress/scripts` for Webpack builds, SCSS compilation, WordPress dependency extraction, linting, and Vitest unit tests. Install the JavaScript development dependencies with:
+
+```sh
+npm install
+```
+
+Source assets live under `assets/src/`: SCSS in `css/`, TypeScript in `js/`, and Vitest tests in `js/tests/`. The `main`, `blocks`, and `editor` TypeScript entries import their matching SCSS files. Each custom block lives in its own `assets/src/blocks/<block-name>/` directory and is discovered from its `block.json`. Use these commands during development:
+
+```sh
+npm start          # Rebuild assets when source files change
+npm run build      # Type-check TypeScript and create a production build
+npm run test:unit       # Run Vitest once through wp-scripts
+npm run test:unit:watch # Run Vitest in watch mode
+npm run lint:js    # Lint TypeScript/JavaScript
+npm run lint:css   # Lint styles
+```
+
+`wp-scripts` writes the production files and `.asset.php` dependency metadata to `assets/build/`, which is generated and ignored by Git. Generate it before packaging a release.
+
+The `Assets` class (`includes/classes/class-assets.php`) enqueues the main bundle on the front end, shared block assets on `enqueue_block_assets`, and editor assets on `enqueue_block_editor_assets`. `@wordpress/scripts` discovers and builds every block with a `block.json` under `assets/src/blocks/`, then generates `assets/build/blocks-manifest.php`; the `Blocks` class registers the collection through WordPress's metadata-collection API. Each block keeps registration in `index.tsx` and editor UI in `edit.tsx`; the static example also has `save.tsx`, and both have a front-end `view.ts` entry. The dynamic example renders through `render.php`. Run `npm run build` before testing assets in WordPress.

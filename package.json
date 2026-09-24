@@ -1,0 +1,28 @@
+{
+  "name": "wordpress-plugin-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Front-end asset tooling for the WordPress Plugin Template",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "wp-scripts start --blocks-manifest --source-path=assets/src --output-path=assets/build",
+    "build": "npm run typecheck && wp-scripts build --blocks-manifest --source-path=assets/src --output-path=assets/build",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "wp-scripts test-unit-js",
+    "test:unit:watch": "wp-scripts test-unit-js --watch",
+    "lint:js": "wp-scripts lint-js assets/src",
+    "lint:css": "wp-scripts lint-style 'assets/src/**/*.scss'"
+  },
+  "devDependencies": {
+    "@wordpress/block-editor": "^18.0.0",
+    "@wordpress/blocks": "^16.1.0",
+    "@wordpress/i18n": "^6.29.0",
+    "@wordpress/scripts": "^36.0.0",
+    "sass": "^1.104.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
+  }
+}

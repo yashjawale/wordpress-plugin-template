@@ -4,6 +4,7 @@
 
 	<file>wordpress-plugin-template.php</file>
 	<file>includes</file>
+	<file>assets/src</file>
 
 	<exclude-pattern>vendor/*</exclude-pattern>
 
