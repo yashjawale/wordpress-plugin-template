@@ -10,7 +10,11 @@
     "autoload": {
         "psr-4": {
             "WordPressPluginTemplate\\": "includes/"
-        }
+        },
+        "classmap": [
+            "includes/classes/",
+            "includes/traits/"
+        ]
     },
     "authors": [
         {
