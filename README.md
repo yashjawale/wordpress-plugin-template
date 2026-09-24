@@ -84,6 +84,8 @@ npm run lint:js    # Lint TypeScript/JavaScript
 npm run lint:css   # Lint styles
 ```
 
+Husky runs lint-staged before each commit. It runs PHPCS on staged PHP files and the WordPress JavaScript/style linters on staged JS/TS and CSS/SCSS files. Install dependencies with `npm install` to enable the Git hook.
+
 `wp-scripts` writes the production files and `.asset.php` dependency metadata to `assets/build/`, which is generated and ignored by Git. Generate it before packaging a release.
 
 The `Assets` class (`includes/classes/class-assets.php`) enqueues the main bundle on the front end, shared block assets on `enqueue_block_assets`, and editor assets on `enqueue_block_editor_assets`. `@wordpress/scripts` discovers and builds every block with a `block.json` under `assets/src/blocks/`, then generates `assets/build/blocks-manifest.php`; the `Blocks` class registers the collection through WordPress's metadata-collection API. Each block keeps registration in `index.tsx` and editor UI in `edit.tsx`; the static example also has `save.tsx`, and both have a front-end `view.ts` entry. The dynamic example renders through `render.php`. Run `npm run build` before testing assets in WordPress.
