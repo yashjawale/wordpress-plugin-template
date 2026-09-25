@@ -43,6 +43,8 @@ The generated `vendor/` directory is not committed, so it must be generated as p
 
 GitHub Actions runs PHPStan, the JavaScript unit tests, the asset build/type check, and PHP/JavaScript/CSS lint checks for pushes and pull requests.
 
+Dependabot checks Composer, npm, and GitHub Actions dependencies weekly. Security updates are grouped separately from routine version updates. Enable **Dependabot alerts** and **Dependabot security updates** in the repository's Settings → Code security and analysis so GitHub can detect CVEs and open security-fix pull requests.
+
 This template uses the official WordPress Coding Standards through PHPCS. Install the development dependencies with `composer install`, then check the PHP files with:
 
 ```sh
