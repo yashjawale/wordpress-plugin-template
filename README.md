@@ -41,6 +41,8 @@ The generated `vendor/` directory is not committed, so it must be generated as p
 
 ## PHP coding standards
 
+GitHub Actions runs PHPStan, the JavaScript unit tests, the asset build/type check, and PHP/JavaScript/CSS lint checks for pushes and pull requests.
+
 This template uses the official WordPress Coding Standards through PHPCS. Install the development dependencies with `composer install`, then check the PHP files with:
 
 ```sh
