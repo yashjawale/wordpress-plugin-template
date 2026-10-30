@@ -45,6 +45,8 @@ GitHub Actions runs PHPStan, the JavaScript unit tests, the asset build/type che
 
 Dependabot checks Composer, npm, and GitHub Actions dependencies weekly. Security updates are grouped separately from routine version updates. Enable **Dependabot alerts** and **Dependabot security updates** in the repository's Settings → Code security and analysis so GitHub can detect CVEs and open security-fix pull requests.
 
+The Dependabot auto-merge workflow enables squash auto-merge for Dependabot pull requests. In repository settings, enable **Allow auto-merge** and configure the branch protection rule or ruleset to require the CI checks that must pass before merging; GitHub waits for those required checks before completing the merge.
+
 This template uses the official WordPress Coding Standards through PHPCS. Install the development dependencies with `composer install`, then check the PHP files with:
 
 ```sh
